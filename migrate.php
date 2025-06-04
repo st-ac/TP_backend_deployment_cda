@@ -7,7 +7,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Créer la base de données
-    $pdo->exec("CREATE DATABASE IF NOT EXISTS taregirk-test_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
+    $pdo->exec("CREATE DATABASE IF NOT EXISTS ‘taregirk-test_db‘ CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
     echo "Base de données 'taregirk-test_db' créée ou déjà existante.\n";
 
     // Se connecter à la base nouvellement créée
