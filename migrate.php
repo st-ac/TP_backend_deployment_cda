@@ -3,14 +3,7 @@ require 'config.php';
 
 // Connexion sans base pour la créer d'abord
 try {
-    $pdo = new PDO("mysql:host=$host", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // Créer la base de données
-    $pdo->exec("CREATE DATABASE IF NOT EXISTS ‘taregirk-test_db‘ CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
-    echo "Base de données ‘taregirk-test_db‘ créée ou déjà existante.\n";
-
-    // Se connecter à la base nouvellement créée
+    
     $pdo->exec("USE ‘taregirk-test_db‘");
 
     // Créer la table
